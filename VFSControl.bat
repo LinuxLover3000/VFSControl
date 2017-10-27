@@ -1,6 +1,5 @@
 @echo off
 goto start
-color e
 :start
 cls
 title VFSControl Alpha
@@ -28,14 +27,14 @@ echo.
 echo Step 1: Choose your airplane.
 echo Please type the type of your airplane.
 echo.
-echo Cirrus....... CIR
+echo Cirrus SR20.. CIR
 echo Twin Otter... OTR
 echo Cessna 182R.. C18
 echo Boeing 737-7. B77
 echo Boeing 737-8. B78
-echo A319......... A19
-echo A320......... A20
-echo A321......... A21
+echo Airbus A319.. A19
+echo Airbus A320.. A20
+echo Airbus A321.. A21
 echo.
 set /p aircraft="Type identifier code: "
 cls
@@ -281,7 +280,8 @@ echo 3) Visibility: %vis%
 echo 4) Temperature: %temp%
 echo 5) Gates In Use/Available: %gates%
 echo 6) Landing Slots In Use/Available: %slots%
-echo 7) Exit Controlling
+echo 7) Create a METAR Report
+echo 8) Exit Controlling
 echo.
 set /p select="Enter: "
 if %select%==1 (
@@ -309,10 +309,14 @@ set /p slots="What would you like to change it to? "
 goto atc
 )
 if %select%==7 (
+call metar.bat
+goto atc
+)
+if %select%==8 (
 goto start
 )
 :exit
 cls
 echo Closing program.
 ping localhost -n 3>nul
-close
+exit
