@@ -5,7 +5,7 @@ echo.
 echo So Far: METAR .... ......Z ..... ..SM ..... ../.. A.... RMK .
 echo.
 echo Thanks for using this program. Please take the time to fill out this METAR.
-echo At any time, you can type "exit" to exit.
+echo At any time, you can type "exit" to return to the main program.
 pause
 cls
 echo Enter your airport's four letter identification.
