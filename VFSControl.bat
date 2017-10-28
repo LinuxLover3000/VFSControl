@@ -18,12 +18,7 @@ if %choice%==2 (
 call atc.bat
 goto start
 )
-if not %choice%==1 or 2 (
-goto exit
-)
-
-:exit
-cls
-echo Closing program.
-ping localhost -n 3>nul
+if %choice%==3 (
 exit
+)
+goto start

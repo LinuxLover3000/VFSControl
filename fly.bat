@@ -5,12 +5,13 @@ set dep=null
 set arr=null
 set line=null
 set fltn=null
+cls
 echo VFSControl Flight Panel
 echo.
 echo Select an option.
 echo.
 echo 1) Set up a flight
-echo 2) Return to ATC Panel
+echo 2) Return to VFSControl
 echo.
 set /p option="Enter: "
 if %option%==1 (
@@ -126,7 +127,8 @@ goto start
 )
 
 :flight
-echo Flight
+cls
+echo VFSControl Flight Panel
 echo.
 echo Aircraft: %acft% / Departure Airport: %dep% / Arrival Airpot: %arr% / Callsign: %line%%fltn%
 echo.
