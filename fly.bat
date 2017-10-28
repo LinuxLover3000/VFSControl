@@ -5,12 +5,13 @@ set dep=null
 set arr=null
 set line=null
 set fltn=null
+cls
 echo VFSControl Flight Panel
 echo.
 echo Select an option.
 echo.
 echo 1) Set up a flight
-echo 2) Return to ATC Panel
+echo 2) Return to VFSControl Main Panel
 echo.
 set /p option="Enter: "
 if %option%==1 (
@@ -126,7 +127,8 @@ goto start
 )
 
 :flight
-echo Flight
+cls
+echo VFSControl Flight Panel
 echo.
 echo Aircraft: %acft% / Departure Airport: %dep% / Arrival Airpot: %arr% / Callsign: %line%%fltn%
 echo.
@@ -144,7 +146,7 @@ echo.
 echo When you are ready to begin your flight, press any key.
 pause>nul
 cls
-echo Flight
+echo VFSControl Flight Panel
 echo.
 echo Aircraft: %acft% / Departure Airport: %dep% / Arrival Airpot: %arr% / Callsign: %line%%fltn%
 echo.
@@ -158,7 +160,7 @@ echo.
 echo When you have pushed back, press any key.
 pause>nul
 cls
-echo Flight
+echo VFSControl Flight Panel
 echo.
 echo Aircraft: %acft% / Departure Airport: %dep% / Arrival Airpot: %arr% / Callsign: %line%%fltn%
 echo.
@@ -172,7 +174,7 @@ echo.
 echo When you are holding at the runway, press any key.
 pause>nul
 cls
-echo Flight
+echo VFSControl Flight Panel
 echo.
 echo Aircraft: %acft% / Departure Airport: %dep% / Arrival Airpot: %arr% / Callsign: %line%%fltn%
 echo.
@@ -190,7 +192,7 @@ echo.
 echo Once you have taken off, press any key.
 pause>nul
 cls
-echo Flight
+echo VFSControl Flight Panel
 echo.
 echo Aircraft: %acft% / Departure Airport: %dep% / Arrival Airpot: %arr% / Callsign: %line%%fltn%
 echo.
@@ -202,7 +204,7 @@ echo.
 echo Once you start descending, press any key.
 pause>nul
 cls
-echo Flight
+echo VFSControl Flight Panel
 echo.
 echo Aircraft: %acft% / Departure Airport: %dep% / Arrival Airpot: %arr% / Callsign: %line%%fltn%
 echo.
@@ -216,7 +218,7 @@ echo.
 echo Once you have lowered your gear, press any key.
 pause>nul
 cls
-echo Flight
+echo VFSControl Flight Panel
 echo.
 echo Aircraft: %acft% / Departure Airport: %dep% / Arrival Airpot: %arr% / Callsign: %line%%fltn%
 echo.
@@ -229,7 +231,7 @@ echo.
 echo Once you have vacated, press any key
 pause>nul
 cls
-echo Flight
+echo VFSControl Flight Panel
 echo.
 echo Aircraft: %acft% / Departure Airport: %dep% / Arrival Airpot: %arr% / Callsign: %line%%fltn%
 echo.
@@ -241,6 +243,8 @@ echo.
 echo Once you have shut down, press any key to end the flight.
 pause>nul
 cls
+echo VFSControl Flight Panel
+echo.
 echo Congratulations! You have competed your flight.
 echo.
 echo [1234567]

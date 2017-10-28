@@ -1,12 +1,12 @@
 @echo off
 :start
 cls
-echo Hello. Welcome to VFSControl METAR Creator.
+echo VFSControl METAR Creator
 echo.
 echo Select an option.
 echo.
 echo 1) Create a METAR
-echo 2) Return to VFSControl
+echo 2) Return to ATC Panel
 echo.
 set /p option="Enter: "
 if %option%==1 (
