@@ -3,7 +3,7 @@ goto start
 :start
 cls
 title VFSControl Alpha
-echo Welcome to VFSControl!
+echo VFSControl Main Panel
 echo.
 echo 1) Fly a Plane
 echo 2) Control an Airport

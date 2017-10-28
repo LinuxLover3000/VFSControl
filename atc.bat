@@ -6,7 +6,7 @@ echo.
 echo Please select an option.
 echo.
 echo 1) Control an airport
-echo 2) Return to VFSControl
+echo 2) Return to VFSControl Main Panel
 echo.
 set /p option="Enter: "
 if %option%==1 (
@@ -45,7 +45,7 @@ set gates=Set this value.
 set slots=Set this value.
 goto atc
 )
-if %control%==2 (
+if %yn%==2 (
 goto start
 )
 :atc
