@@ -13,7 +13,7 @@ if %option%==1 (
 goto metar
 )
 if %option%==2 (
-exit
+exit /b
 )
 :metar
 cls
@@ -65,19 +65,19 @@ echo.
 echo Enter the direction and speed of the wind.
 echo ex. 190 degrees at 20 knots is 19020.
 echo.
-set /p wind="Enter: "
+set /p mwind="Enter: "
 cls
 echo VFSControl METAR Creator
 echo.
-echo So Far: METAR %icao% %day%%zulu%Z %visi%SM %wind% *..*/.. A.... RMK .
+echo So Far: METAR %icao% %day%%zulu%Z %visi%SM %mwind% *..*/.. A.... RMK .
 echo.
 echo Enter the temperature in Celsius.
 echo.
-set /p temp="Enter: "
+set /p mtemp="Enter: "
 cls
 echo VFSControl METAR Creator
 echo.
-echo So Far: METAR %icao% %day%%zulu%Z %visi%SM %wind% %temp%/*..* A.... RMK .
+echo So Far: METAR %icao% %day%%zulu%Z %visi%SM %mwind% %mtemp%/*..* A.... RMK .
 echo.
 echo Enter the dewpoint in Celsius.
 echo.
@@ -85,7 +85,7 @@ set /p dewp="Enter: "
 cls
 echo VFSControl METAR Creator
 echo.
-echo So Far: METAR %icao% %day%%zulu%Z %visi%SM %wind% %temp%/%dewp% A*....* RMK .
+echo So Far: METAR %icao% %day%%zulu%Z %visi%SM %mwind% %mtemp%/%dewp% A*....* RMK .
 echo.
 echo Enter the altimiter setting.
 echo.
@@ -93,7 +93,7 @@ set /p alti="Enter: "
 cls
 echo VFSControl METAR Creator
 echo.
-echo So Far: METAR %icao% %day%%zulu%Z %visi%SM %wind% %temp%/%dewp% A%alti% RMK .
+echo So Far: METAR %icao% %day%%zulu%Z %visi%SM %mwind% %mtemp%/%dewp% A%alti% RMK .
 echo.
 echo Enter any remarks you may want to add.
 echo.
@@ -101,7 +101,7 @@ set /p rmrk="Enter: "
 cls
 echo VFSControl METAR Creator
 echo.
-echo Your METAR: METAR %icao% %day%%zulu%Z %visi%SM %wind% %temp%/%dewp% A%alti% RMK %rmrk%
+echo Your METAR: METAR %icao% %day%%zulu%Z %visi%SM %mwind% %mtemp%/%dewp% A%alti% RMK %rmrk%
 echo.
 echo Save this METAR?
 echo 1) Yes
@@ -109,7 +109,7 @@ echo 2) No
 echo.
 set /p save="Enter: "
 if %save%==1 (
-echo METAR %icao% %day%%zulu%Z %visi%SM %wind% %temp%/%dewp% A%alti% RMK %rmrk%>METAR%icao%%day%%zulu%.txt
+echo METAR %icao% %day%%zulu%Z %visi%SM %mwind% %mtemp%/%dewp% A%alti% RMK %rmrk%>METAR%icao%%day%%zulu%.txt
 goto start
 )
 if %save%==2 (
