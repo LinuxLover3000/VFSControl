@@ -1,21 +1,35 @@
 @echo off
 :start
+cls
+echo Hello. Welcome to VFSControl METAR Creator.
+echo.
+echo Select an option.
+echo.
+echo 1) Create a METAR
+echo 2) Return to VFSControl
+echo.
+set /p option="Enter: "
+if %option%==1 (
+goto metar
+)
+if %option%==2 (
+exit
+)
+:metar
+cls
 echo VFSControl METAR Creator
 echo.
 echo So Far: METAR .... ......Z ..... ..SM ..... ../.. A.... RMK .
 echo.
-echo Thanks for using this program. Please take the time to fill out this METAR.
-echo At any time, you can type "exit" to return to the main program.
 pause
 cls
-echo Enter your airport's four letter identification.
+echo VFSControl METAR Creator
 echo.
 echo So Far: METAR *....* ......Z ..... ..SM ..... ../.. A.... RMK .
 echo.
+echo Enter your airport's four letter identification.
+echo.
 set /p icao="Enter: "
-if %icao%==exit or exiT or exIt or exIT or eXit or eXiT or eXIt or eXIT or Exit or ExiT or ExIt or ExIT or EXit or EXiT or EXIT (
-exit
-)
 cls
 echo VFSControl METAR Creator
 echo.
@@ -25,9 +39,6 @@ echo Enter the day of the month.
 echo ex. July 4, 2007 = 04
 echo.
 set /p day="Enter: "
-if %day%==exit or exiT or exIt or exIT or eXit or eXiT or eXIt or eXIT or Exit or ExiT or ExIt or ExIT or EXit or EXiT or EXIT (
-exit
-)
 cls
 echo VFSControl METAR Creator
 echo.
@@ -37,9 +48,6 @@ echo Enter the UTC time in four digits.
 echo ex. 1632
 echo.
 set /p zulu="Enter: "
-if %zulu%==exit or exiT or exIt or exIT or eXit or eXiT or eXIt or eXIT or Exit or ExiT or ExIt or ExIT or EXit or EXiT or EXIT (
-exit
-)
 cls
 echo VFSControl METAR Creator
 echo.
@@ -49,9 +57,6 @@ echo Enter the visibility in statued miles between 1 and 20.
 echo ex. 15
 echo.
 set /p visi="Enter: "
-if %visi%==exit or exiT or exIt or exIT or eXit or eXiT or eXIt or eXIT or Exit or ExiT or ExIt or ExIT or EXit or EXiT or EXIT (
-exit
-)
 cls
 echo VFSControl METAR Creator
 echo.
@@ -61,9 +66,6 @@ echo Enter the direction and speed of the wind.
 echo ex. 190 degrees at 20 knots is 19020.
 echo.
 set /p wind="Enter: "
-if %wind%==exit or exiT or exIt or exIT or eXit or eXiT or eXIt or eXIT or Exit or ExiT or ExIt or ExIT or EXit or EXiT or EXIT (
-exit
-)
 cls
 echo VFSControl METAR Creator
 echo.
@@ -72,9 +74,6 @@ echo.
 echo Enter the temperature in Celsius.
 echo.
 set /p temp="Enter: "
-if %temp%==exit or exiT or exIt or exIT or eXit or eXiT or eXIt or eXIT or Exit or ExiT or ExIt or ExIT or EXit or EXiT or EXIT (
-exit
-)
 cls
 echo VFSControl METAR Creator
 echo.
@@ -83,9 +82,6 @@ echo.
 echo Enter the dewpoint in Celsius.
 echo.
 set /p dewp="Enter: "
-if %dewp%==exit or exiT or exIt or exIT or eXit or eXiT or eXIt or eXIT or Exit or ExiT or ExIt or ExIT or EXit or EXiT or EXIT (
-exit
-)
 cls
 echo VFSControl METAR Creator
 echo.
@@ -94,9 +90,6 @@ echo.
 echo Enter the altimiter setting.
 echo.
 set /p alti="Enter: "
-if %alti%==exit or exiT or exIt or exIT or eXit or eXiT or eXIt or eXIT or Exit or ExiT or ExIt or ExIT or EXit or EXiT or EXIT (
-exit
-)
 cls
 echo VFSControl METAR Creator
 echo.
@@ -105,9 +98,6 @@ echo.
 echo Enter any remarks you may want to add.
 echo.
 set /p rmrk="Enter: "
-if %rmrk%==exit or exiT or exIt or exIT or eXit or eXiT or eXIt or eXIT or Exit or ExiT or ExIt or ExIT or EXit or EXiT or EXIT (
-exit
-)
 cls
 echo VFSControl METAR Creator
 echo.
@@ -118,9 +108,6 @@ echo 1) Yes
 echo 2) No
 echo.
 set /p save="Enter: "
-if %save%==exit or exiT or exIt or exIT or eXit or eXiT or eXIt or eXIT or Exit or ExiT or ExIt or ExIT or EXit or EXiT or EXIT (
-exit
-)
 if %save%==1 (
 echo METAR %icao% %day%%zulu%Z %visi%SM %wind% %temp%/%dewp% A%alti% RMK %rmrk%>METAR%icao%%day%%zulu%.txt
 goto start
